@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ConnectDB.png</file>
+        <file>DisconnectDB.png</file>
+        <file>Exit.png</file>
+        <file>CreateDB.png</file>
+        <file>About.png</file>
+        <file>Open.png</file>
+        <file>Delete.png</file>
+        <file>Edit.png</file>
+        <file>AddTable.png</file>
+        <file>Add.png</file>
+        <file>DeleteTable.png</file>
+        <file>Clear.png</file>
+        <file>Play.png</file>
+        <file>Save.png</file>
+        <file>Load.png</file>
+        <file>Next.png</file>
+    </qresource>
+</RCC>

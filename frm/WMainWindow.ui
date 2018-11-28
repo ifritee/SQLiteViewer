@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WMainWindow</class>
+ <widget class="QMainWindow" name="WMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>925</width>
+    <height>688</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SQLiteViewer - Программа обработки SQLite БД</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="CentralWidget_tw">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <property name="documentMode">
+       <bool>true</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <widget class="sqliteviewer::WDBInquiry" name="Inquiry_tab">
+       <attribute name="title">
+        <string>Запросы</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="Perfomance_tab">
+       <attribute name="title">
+        <string>Представление</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="sqliteviewer::WPerfomance" name="Main_gv"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>925</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="Create_ac"/>
+    <addaction name="separator"/>
+    <addaction name="Connect_ac"/>
+    <addaction name="Disconnect_ac"/>
+    <addaction name="separator"/>
+    <addaction name="SaveScript_ac"/>
+    <addaction name="LoadScript_ac"/>
+    <addaction name="separator"/>
+    <addaction name="Exit_ac"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="About_ac"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Правка</string>
+    </property>
+    <addaction name="AddTable_ac"/>
+    <addaction name="DeleteTable_ac"/>
+    <addaction name="separator"/>
+    <addaction name="CreateDDS_ac"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>Отчет</string>
+    </property>
+    <addaction name="ExcelReport_ac"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>Окно</string>
+    </property>
+    <addaction name="Inquiry_ac"/>
+    <addaction name="Perfomance_ac"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::NoToolBarArea</set>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="Create_ac"/>
+   <addaction name="Connect_ac"/>
+   <addaction name="Disconnect_ac"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="features">
+    <set>QDockWidget::NoDockWidgetFeatures</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Открытая SQLite база</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QTreeWidget" name="TreeWidget_tw">
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="dragDropMode">
+        <enum>QAbstractItemView::DragOnly</enum>
+       </property>
+       <property name="uniformRowHeights">
+        <bool>true</bool>
+       </property>
+       <property name="animated">
+        <bool>true</bool>
+       </property>
+       <property name="allColumnsShowFocus">
+        <bool>true</bool>
+       </property>
+       <property name="headerHidden">
+        <bool>false</bool>
+       </property>
+       <column>
+        <property name="text">
+         <string>Нет подключенной БД</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="AddTable_ac"/>
+   <addaction name="DeleteTable_ac"/>
+  </widget>
+  <action name="Connect_ac">
+   <property name="icon">
+    <iconset resource="../res/Icons.qrc">
+     <normaloff>:/ConnectDB.png</normaloff>:/ConnectDB.png</iconset>
+   </property>
+   <property name="text">
+    <string>Подключить БД</string>
+   </property>
+  </action>
+  <action name="Disconnect_ac">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/Icons.qrc">
+     <normaloff>:/DisconnectDB.png</normaloff>:/DisconnectDB.png</iconset>
+   </property>
+   <property name="text">
+    <string>Отключить БД</string>
+   </property>
+  </action>
+  <action name="Exit_ac">
+   <property name="icon">
+    <iconset resource="../res/Icons.qrc">
+     <normaloff>:/Exit.png</normaloff>:/Exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Закрыть ПО</string>
+   </property>
+  </action>
+  <action name="About_ac">
+   <property name="icon">
+    <iconset resource="../res/Icons.qrc">
+     <normaloff>:/About.png</normaloff>:/About.png</iconset>
+   </property>
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="ExcelReport_ac">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Составить отчет EXEL</string>
+   </property>
+  </action>
+  <action name="AddTable_ac">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/Icons.qrc">
+     <normaloff>:/AddTable.png</normaloff>:/AddTable.png</iconset>
+   </property>
+   <property name="text">
+    <string>Добавить таблицу</string>
+   </property>
+  </action>
+  <action name="DeleteTable_ac">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/Icons.qrc">
+     <normaloff>:/DeleteTable.png</normaloff>:/DeleteTable.png</iconset>
+   </property>
+   <property name="text">
+    <string>Удалить таблицу</string>
+   </property>
+  </action>
+  <action name="Create_ac">
+   <property name="icon">
+    <iconset resource="../res/Icons.qrc">
+     <normaloff>:/CreateDB.png</normaloff>:/CreateDB.png</iconset>
+   </property>
+   <property name="text">
+    <string>Создать БД</string>
+   </property>
+   <property name="iconText">
+    <string>Создать БД</string>
+   </property>
+   <property name="toolTip">
+    <string>Создать БД</string>
+   </property>
+  </action>
+  <action name="Perfomance_ac">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Представление</string>
+   </property>
+  </action>
+  <action name="Inquiry_ac">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Запросы</string>
+   </property>
+  </action>
+  <action name="CreateDDS_ac">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Сформировать DDS</string>
+   </property>
+  </action>
+  <action name="SaveScript_ac">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/Icons.qrc">
+     <normaloff>:/Save.png</normaloff>:/Save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить скрипт</string>
+   </property>
+  </action>
+  <action name="LoadScript_ac">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/Icons.qrc">
+     <normaloff>:/Load.png</normaloff>:/Load.png</iconset>
+   </property>
+   <property name="text">
+    <string>Загрузить скрипт</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>sqliteviewer::WDBInquiry</class>
+   <extends>QWidget</extends>
+   <header>WDBInquiry.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>sqliteviewer::WPerfomance</class>
+   <extends>QGraphicsView</extends>
+   <header>WPerfomance.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../res/Icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>Exit_ac</sender>
+   <signal>triggered()</signal>
+   <receiver>WMainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>343</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
