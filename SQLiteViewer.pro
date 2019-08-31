@@ -14,6 +14,9 @@ TARGET = SQLiteViewer
 
 TEMPLATE = app
 
+VERSION = 0.0.2
+
+DEFINES += VERSION=\\\"$$VERSION\\\"
 
 SOURCES += \
     src/main.cpp\
